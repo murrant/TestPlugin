@@ -1,0 +1,37 @@
+{
+  "name": "librenms/test-plugin",
+  "description": "A demo LibreNMS plugin package",
+  "version": "1.0.0",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Tony Murray",
+      "email": "murraytony@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "librenms/librenms": "dev-master"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "LibreNMS\\TestPlugin\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "LibreNMS\\TestPlugin \\Tests\\": "tests"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "LibreNMS\\TestPlugin\\Providers\\TestPluginProvider"
+      ]
+    }
+  }
+}
